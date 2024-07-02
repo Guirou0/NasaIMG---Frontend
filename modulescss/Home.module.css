@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+.home{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    background-color: #5f9ea042;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(5px 5px 20px #B0E0E6);
+    width: 70%;
+    height: 70%;
+    padding: 2%;
+    font-family: "Strait", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    animation: fadeDown 2s ease-out;
+}
+
+.home h1{
+    font-size: 3.3vw;
+    animation: fadeRight 2s ease-out;
+}
+
+.home h1::after{
+    display: block;
+    content: "";
+    width: 70%;
+    height: 3px;
+    background-color: black;
+    margin-left: 50%;
+    translate: -50% 0;
+}
+
+.home p{
+    font-size: 1.6vw;
+    text-indent: 1.25cm;
+    text-align: justify;
+    animation: fadeLeft 2s ease-out;
+}
+
+.logo{
+    filter: brightness(0%);
+    animation: fadeLeft 2s ease-out;
+}
+
+@keyframes fadeDown{
+    0%{
+        transform: translate(-50%, 100%);
+    }
+    100%{
+        transform: translateY(-50%, -50%);
+    }
+}
+
+@keyframes fadeLeft{
+    0%{
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes fadeRight{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .home{
+        left: 70px;
+        top: 0%;
+        transform: translate(0%, 0%);
+        width: calc(100% - 70px);
+        height: 100%;
+    }
+    .home h1{
+        font-size: 5.5vw;
+    }
+    .home p{
+        font-size: 3.9vw;
+    }
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 501px){
+    .home{
+        left: 70px;
+        top: 0%;
+        transform: translate(0%, 0%);
+        width: calc(100% - 70px);
+        height: 100%;
+    }
+    .home h1{
+        font-size: 5vw;
+    }
+    .home p{
+        font-size: 3vw;
+    }
+    .logo{
+        width: 150px;
+        height: 150px;
+    }
+}

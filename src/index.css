@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #1575b0;
+  background-image: linear-gradient( #191970 17%, #004995, #1575b0, #56a0c5, #96cad9, #aad8e3, #bee6ee, #d3f4f9, #beebf7, #a9e2f8, #96d9f9, #87cefa);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 100vh;
+  overflow: hidden;
+}

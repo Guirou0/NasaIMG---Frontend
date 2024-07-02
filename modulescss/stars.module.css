@@ -1,0 +1,27 @@
+.star{
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 100%;
+    filter: drop-shadow(-3px 3px 7px white) brightness(1000);
+    animation: cintilante ease infinite, appear 1s ease;
+}
+
+@keyframes cintilante {
+    50%{
+        transform: scale(1.6);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
