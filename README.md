@@ -10,7 +10,7 @@
           
           
 
-#Fotos
+# Fotos
 
 ![image](https://github.com/Guirou0/NasaIMG---Frontend/assets/139828314/feb4bce7-7d5b-4d47-9701-9649805887d3)
 Página inical
