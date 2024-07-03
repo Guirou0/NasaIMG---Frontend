@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Strait&display=swap');
+
+.APD{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+    background-image: linear-gradient(rgb(41, 140, 221, 0.4) 60%, rgb(157, 209, 73, 0.4));
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    animation: appear 2s ease-out;
+}
+
+.toggle{
+    margin-top: 5px;
+    width: 100%;
+    height: 10%;
+    font-family: "Strait", sans-serif;
+    font-weight: 800;
+    font-size: 1.4vw;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sep{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    background-color: #000;
+    transition: width .8s ease-out;
+}
+
+
+.toggleButton{
+    border: 2px solid #000;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: none;
+    background-position: 0%;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform .5s ease-out;
+}
+
+.toggleButton:hover{
+    transform: scale(1.2);
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 701px) {
+    .toggle{
+        font-size: 2.1vw;
+        height: 15%;
+        padding: 10px;
+    }
+    .toggle label{
+        max-width: 80%;
+    }
+    .toggleButton{
+        width: 50px;
+        height: 50px;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    .APD{
+        top: 0%;
+        left: 70px;
+        width: calc(100% - 70px);
+        height: 100%;
+        transform: translate(0%, 0%);
+    }
+    .toggle{
+        font-size: 3vw;
+    }
+    .toggle label{
+        max-width: 80%;
+        text-align: center;
+    }
+    .toggleButton{
+        width: 50px;
+        height: 50px;
+    }
+}
