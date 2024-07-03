@@ -99,6 +99,9 @@ const Search = () => {
         setPhotos(['Loading'])
         API.get(`/search?q=${search}`).then((response)=>{
             setPhotos(response.data == "NF"? ["NF"]: response.data)
+        }).catch((error)=>{
+            setPhotos([]);
+            alert(error.message);
         })
         setSearch("");
     }
@@ -124,7 +127,7 @@ const Search = () => {
             <form className={styles.searchbar} onSubmit={handleSearch}>
                 <IoSearchCircleOutline className={styles.searchicon}/>
                 <input value={search} className={styles.searchinput} type="text" placeholder="Insira sua pesquisa em inglês aqui" onChange={(e)=>{setSearch(e.target.value)}} required/>
-                <input className={styles.submit} type="submit" value="Pesquisar"/>
+                <input className={styles.submit} type="submit" value="" title="Pesquisar"/>
                 {}
             </form>
             {content()}

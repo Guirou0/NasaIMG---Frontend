@@ -46,6 +46,9 @@ const Rover = () => {
         setPhotos(['Loading'])
         API.get(`/rover?d=${search}`).then((response)=>{
             setPhotos(response.data == "NF"? ["NF"]: response.data)
+        }).catch((error)=>{
+            setPhotos([]);
+            alert(error.message);
         })
         setSearch("");
     }
@@ -72,7 +75,7 @@ const Rover = () => {
                 <IoSearchCircleOutline className={styles.searchicon}/>
                 <label>Insira a data das fotografias a partir do dia 26/11/2011:</label>
                 <input value={search} className={styles.searchinput} type="date" onChange={(e)=>{setSearch(e.target.value)}} required/>
-                <input className={styles.submit} type="submit" value="Pesquisar"/>
+                <input className={styles.submit} type="submit" value="" title="Pesquisar"/>
                 {}
             </form>
             {content()}
