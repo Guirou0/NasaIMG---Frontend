@@ -26,7 +26,7 @@ const APD = () => {
                 <button onClick={toggle} className={styles.toggleButton} style={{backgroundImage: `${today ? 'url(../src/assets/next.png)': 'url(../src/assets/back.png)'}`}} />
             </div>
             <div className={styles.sep} style={{width: `${today? "95%" : "40%"}`}}></div>
-            {today? <PhotoDay /> : <PhotoPast />}
+            {today? <PhotoDay photo={"APD"} /> : <PhotoPast />}
         </div>
     )
 }
