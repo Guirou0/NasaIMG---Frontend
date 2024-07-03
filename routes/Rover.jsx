@@ -7,7 +7,7 @@ import { IoSearchCircleOutline } from "react-icons/io5"
 import Photo from "../componentes/photo.jsx"
 
 const API = axios.create({
-    baseURL: ''
+    baseURL: 'http://localhost:3000'
   })
 
 const Rover = () => {
